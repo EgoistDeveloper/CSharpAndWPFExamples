@@ -1,0 +1,42 @@
+﻿<Window x:Class="OpenAndCloseAnotherWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenAndCloseAnotherWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <WrapPanel Orientation="Horizontal">
+                <GroupBox Header="Static Open and Closes">
+                    <StackPanel Orientation="Vertical">
+                        <ToggleButton Height="30" Width="300" Margin="15"
+                                      Content="Open Another Window With Toggle Button" 
+                                      Click="ToggleButtonStatic_OnClick"/>
+                        <ToggleButton Height="30" Width="300" Margin="15"
+                                      Content="Open/Close Another Window With Class"
+                                      Click="ToggleButtonStatic2_OnClick"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Dynamic Open and Closes">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <ToggleButton Height="30" Width="300" Margin="15"
+                                      Content="Open/Close Another Window With Class"
+                                      Click="ToggleButtonDynamic_OnClick"/>
+                        <Button Height="30" Width="300" Margin="15"
+                                HorizontalAlignment="Center"
+                                Content="Close All AnotherWindows"
+                                Click="Button2_OnClick"/>
+                    </StackPanel>
+                </GroupBox>
+            </WrapPanel>
+
+            <Button Height="30" Width="Auto" Margin="15"
+                    HorizontalAlignment="Center"
+                    Content="Open Other Window"
+                    Click="Button_OnClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
