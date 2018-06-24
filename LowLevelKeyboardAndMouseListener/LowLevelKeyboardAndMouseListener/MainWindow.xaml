@@ -1,0 +1,23 @@
+﻿<Window x:Class="LowLevelKeyboardAndMouseListener.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LowLevelKeyboardAndMouseListener"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Closing="MainWindow_OnClosing">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Pressed Keys">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ListView x:Name="PressedKeys" Width="300"/>
+                    <Button Grid.Row="1" Height="30" Margin="15" Content="See Defined Key List" Click="SeeKeyList_onClick"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
